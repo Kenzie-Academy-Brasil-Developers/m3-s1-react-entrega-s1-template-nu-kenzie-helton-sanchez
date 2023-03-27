@@ -180,13 +180,19 @@ section.container__form>form>button:hover {
 }
 
 .container__summary>ul>li {
-    border-left: 3px solid var(--green);
     position: relative;
     width: 560px;
     max-width: 100%;
     min-height: 87px;
     background: #F8F9FA;
     border-radius: 4px;
+}
+
+.liEntrada{
+    border-left: 3px solid var(--green);
+}
+.liSaida{
+    border-left: 3px solid var(--color-Gray-3);
 }
 
 .container__summary>ul>li>h3 {

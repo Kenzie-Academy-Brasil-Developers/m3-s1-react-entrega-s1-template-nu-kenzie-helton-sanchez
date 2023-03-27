@@ -2,7 +2,10 @@
 export function Card ({description, removeCard}) {
 
     return(
-        <li>
+        <li className={
+            description.typeValue === "entrada" ? "liEntrada":
+            "liSaida"
+        }>
         <h3>{description.description}</h3>
         <p>{description.typeValue}</p>
         <div>

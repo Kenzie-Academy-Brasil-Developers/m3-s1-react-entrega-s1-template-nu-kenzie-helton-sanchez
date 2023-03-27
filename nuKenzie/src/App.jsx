@@ -16,6 +16,8 @@ function App() {
 
   const [summary, setSummary] = useState([])
 
+
+
   function addToSummary (formData) {
     const newCard = { ...formData, id: uuidv4()}
     const newCardList = [...summary, newCard];
@@ -34,7 +36,7 @@ function App() {
     <main>
       <section className='container__form'>
         <Form addToSummary={addToSummary} />
-        <Count />
+        <Count summary={summary} />
       </section>
       <section className='container__summary'>
         <FinancialSummaryList summary={summary} removeCard={removeCard} />
