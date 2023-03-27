@@ -1,13 +1,13 @@
 
-export function Card () {
+export function Card ({description, removeCard}) {
 
     return(
         <li>
-        <h3>Salário - Mês Dezembro</h3>
-        <p>Entrada</p>
+        <h3>{description.description}</h3>
+        <p>{description.typeValue}</p>
         <div>
-            <p>$00,00</p>
-            <button onClick={close}>Excluir</button>
+            <p>R${description.value},00</p>
+            <button onClick={() => removeCard(description.id)}>Excluir</button>
             </div>
         </li>
     )

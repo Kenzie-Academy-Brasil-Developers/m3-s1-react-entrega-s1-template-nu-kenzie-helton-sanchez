@@ -1,11 +1,17 @@
 import { Card } from "./card.jsx";
 
-export function FinancialSummaryList () {
+export function FinancialSummaryList ({summary, removeCard}) {
 
     return(
-        <ul> 
+        <>
         <h2>Resumo financeiro</h2>
-            <Card />
+
+        <ul> 
+            {summary.map((description) => {
+                return <Card key={description.id} description={description} removeCard={removeCard} />
+            })}
         </ul>
+        </>
+
     )
 }

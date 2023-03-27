@@ -8,7 +8,7 @@ export function Form ({ addToSummary }) {
     const submit = (event) => {
         event.preventDefault();
 
-        const formData = {description, value};
+        const formData = {description, value, typeValue};
         addToSummary(formData);
     }
 
@@ -25,6 +25,7 @@ export function Form ({ addToSummary }) {
 
             <label htmlFor="typeValue">Tipo de Valor</label>
             <select name="typeValue" value={typeValue} onChange={(event) => setTypeValue(event.target.value)}>
+                <option value="">Tipo de Valor</option>
                 <option value="entrada">Entrada</option>
                 <option value="saida">Saida</option>
             </select>

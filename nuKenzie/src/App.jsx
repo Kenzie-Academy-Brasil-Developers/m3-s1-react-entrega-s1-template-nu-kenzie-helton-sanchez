@@ -22,6 +22,11 @@ function App() {
     setSummary(newCardList);
   }
 
+  function removeCard (descriptionId) {
+    const newSummary = summary.filter(description => description.id !== descriptionId)
+    setSummary(newSummary);
+  }
+
   return (
     <>
 
@@ -32,7 +37,7 @@ function App() {
         <Count />
       </section>
       <section className='container__summary'>
-        <FinancialSummaryList />
+        <FinancialSummaryList summary={summary} removeCard={removeCard} />
       </section>
     </main>
 
